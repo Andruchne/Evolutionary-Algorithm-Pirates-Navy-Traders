@@ -464,7 +464,7 @@ public class AgentLogic : MonoBehaviour, IComparable
         string info = "";
 
         if (pointsSaved == 0) { info += "Pitty Points" + "\n"; }
-        info += "Final Points: " + pointsSaved + "\n\n";
+        info += "Final Points: " + GetPoints() + "\n\n";
         info += "Steps: " + steps + "\n";
         info += "Ray Radius: " + rayRadius + "\n";
         info += "Sight: " + sight + "\n";

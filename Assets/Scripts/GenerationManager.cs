@@ -299,7 +299,7 @@ public class GenerationManager : MonoBehaviour
                 PrefabUtility.SaveAsPrefabAsset(lastBoatWinner.gameObject, savePrefabsAt + lastBoatWinner.name + ".prefab");
 
                 winnerMessage += $"Last winner boat had: {lastBoatWinner.GetPoints()} points!\n";
-                SetDocumentation("BoatInfo", lastBoatWinner.name, lastBoatWinner.GetInfoString());
+                SetDocumentation("BoatInfo.txt", lastBoatWinner.name, lastBoatWinner.GetInfoString());
             }
         }
         
@@ -337,7 +337,7 @@ public class GenerationManager : MonoBehaviour
                 PrefabUtility.SaveAsPrefabAsset(lastPirateWinner.gameObject, savePrefabsAt + lastPirateWinner.name + ".prefab");
 
                 winnerMessage += $"Last winner pirate had: {lastPirateWinner.GetPoints()}  points!\n";
-                SetDocumentation("PirateInfo", lastPirateWinner.name, lastPirateWinner.GetInfoString());
+                SetDocumentation("PirateInfo.txt", lastPirateWinner.name, lastPirateWinner.GetInfoString());
             } 
         }
 
@@ -362,7 +362,7 @@ public class GenerationManager : MonoBehaviour
                 PrefabUtility.SaveAsPrefabAsset(lastNavyWinner.gameObject, savePrefabsAt + lastNavyWinner.name + ".prefab");
 
                 winnerMessage += $"Last winner navy had: {lastNavyWinner.GetPoints()} points!";
-                SetDocumentation("NavyInfo", lastNavyWinner.name, lastNavyWinner.GetInfoString());
+                SetDocumentation("NavyInfo.txt", lastNavyWinner.name, lastNavyWinner.GetInfoString());
             }
         }
 

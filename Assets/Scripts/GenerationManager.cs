@@ -67,6 +67,9 @@ public class GenerationManager : MonoBehaviour
     [SerializeField]
     private AgentData lastNavyWinnerData;
 
+    [SerializeField]
+    private int fixedSeed = 6;
+
     private bool _runningSimulation;
     private List<BoatLogic> _activeBoats;
     private List<PirateLogic> _activePirates;
@@ -77,7 +80,7 @@ public class GenerationManager : MonoBehaviour
 
     private void Awake()
     {
-        Random.InitState(6);
+        Random.InitState(fixedSeed);
     }
 
     private void Start()
@@ -252,7 +255,7 @@ public class GenerationManager : MonoBehaviour
     /// </summary>
     public void MakeNewGeneration()
     {
-        Random.InitState(6);
+        Random.InitState(fixedSeed);
 
         GenerateBoxes();
 
@@ -380,7 +383,7 @@ public class GenerationManager : MonoBehaviour
      /// </summary>
     public void StartSimulation()
     {
-        Random.InitState(6);
+        Random.InitState(fixedSeed);
 
         GenerateBoxes();
         GenerateObjects();
